@@ -6,8 +6,10 @@ import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
+import org.bukkit.inventory.ItemStack;
 
 public class EventOption implements Listener {
 
@@ -25,6 +27,15 @@ public class EventOption implements Listener {
         if (!(event.getHand() == EquipmentSlot.HAND)) return;
         if(block.getType() == Material.COMPOSTER){
             event.setCancelled(true);
+        }
+    }
+
+    @EventHandler
+    public void onClick(InventoryClickEvent e) {
+        ItemStack slot = e.getCurrentItem();
+        if (slot == null) return;
+        if (slot.getType() == Material.BARRIER) {
+            e.setCancelled(true);
         }
     }
 }
