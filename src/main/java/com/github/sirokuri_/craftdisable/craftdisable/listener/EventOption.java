@@ -1,6 +1,7 @@
 package com.github.sirokuri_.craftdisable.craftdisable.listener;
 
 import com.github.sirokuri_.craftdisable.craftdisable.CraftDisable;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
@@ -10,6 +11,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 public class EventOption implements Listener {
 
@@ -34,8 +36,12 @@ public class EventOption implements Listener {
     public void onClick(InventoryClickEvent e) {
         ItemStack slot = e.getCurrentItem();
         if (slot == null) return;
+        ItemMeta itemMeta = slot.getItemMeta();
+        if (itemMeta == null) return;
         if (slot.getType() == Material.BARRIER) {
-            e.setCancelled(true);
+            if(itemMeta.getDisplayName().equals(ChatColor.RED + "クラフトはできません")){
+                e.setCancelled(true);
+            }
         }
     }
 }
