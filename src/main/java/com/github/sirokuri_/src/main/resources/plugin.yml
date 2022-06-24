@@ -1,0 +1,6 @@
+name: CancelEvent
+version: '${project.version}'
+main: com.github.sirokuri_.cancelEvent.cancelEvent.CancelEvent
+api-version: 1.17
+authors: [ 46kuri_ ]
+description: despawn plugin
