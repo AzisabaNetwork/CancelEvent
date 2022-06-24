@@ -1,2 +1,2 @@
-# CraftDisable
+# CancelEvent
 despawn plugin
