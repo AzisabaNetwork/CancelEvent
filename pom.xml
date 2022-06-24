@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.sirokuri_.craftDisable</groupId>
-    <artifactId>craftDisable</artifactId>
+    <groupId>com.github.sirokuri_.cancelEvent</groupId>
+    <artifactId>CancelEvent</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>CraftDisable</name>
+    <name>CancelEvent</name>
 
-    <description>despawn plugin</description>
+    <description> despawn plugin</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
