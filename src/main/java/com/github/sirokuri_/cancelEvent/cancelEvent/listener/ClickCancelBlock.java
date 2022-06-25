@@ -23,7 +23,7 @@ public class ClickCancelBlock implements Listener {
         if (block == null) return;
         if (!(event.getAction() == Action.RIGHT_CLICK_BLOCK)) return;
         if (!(event.getHand() == EquipmentSlot.HAND)) return;
-        if(block.getType() == Material.COMPOSTER){
+        if (block.getType() == Material.COMPOSTER || block.getType() == Material.GRINDSTONE){
             event.setCancelled(true);
         }
     }
