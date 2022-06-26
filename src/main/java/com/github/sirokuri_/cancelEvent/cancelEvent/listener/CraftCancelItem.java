@@ -4,6 +4,7 @@ import com.github.sirokuri_.cancelEvent.cancelEvent.CancelEvent;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
+import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -36,7 +37,8 @@ public class CraftCancelItem implements Listener {
 
     @EventHandler
     public void onClick(InventoryClickEvent event) {
-        Player player = (Player) event.getView().getPlayer();
+        HumanEntity player = event.getWhoClicked();
+        if (!(player instanceof Player)) return;
         ItemStack itemStack = event.getCurrentItem();
         Inventory inventory = event.getClickedInventory();
         if (inventory == null) return;
@@ -49,7 +51,7 @@ public class CraftCancelItem implements Listener {
                 event.setCancelled(true);
             }
         }
-        if (inventory.getHolder() == player.getInventory().getHolder()){
+        if (inventory == player.getInventory()){
             if (!(slot == 8)) return;
             if (!(player.getGameMode() == GameMode.CREATIVE)) event.setCancelled(true);
         }
