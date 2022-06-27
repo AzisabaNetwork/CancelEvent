@@ -7,4 +7,4 @@ plugin for Despawn server in Azisaba Network
 # Guide
 
 - ``Right-click disabled blocks``：COMPOSTER & GRINDSTONE
-- ``InventoryClick disabled items&slot``： BARRIER(displayname : クラフトはできません) & slotNumber : 8
+- ``InventoryClick disabled item&slot``： BARRIER(displayname : クラフトはできません) & slotNumber : 8
