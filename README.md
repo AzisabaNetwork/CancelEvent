@@ -9,8 +9,5 @@ plugin for Despawn server in Azisaba Network
 
 # Guide
 
-- ``Right-click disabled items``： 一覧  
-    COMPOSTER & GRINDSTONE
-- ``InventoryClick　disabled items&slot``： 一覧  
-    BARRIER(displayname : クラフトはできません)
-    slotNumber: 8
+- ``Right-click disabled items``：COMPOSTER & GRINDSTONE
+- ``InventoryClick　disabled items&slot``： BARRIER(displayname : クラフトはできません) & slotNumber: 8
