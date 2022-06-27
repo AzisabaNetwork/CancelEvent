@@ -1,6 +1,4 @@
 # CancelEvent
-Despawn Plugin
-
 plugin for Despawn server in Azisaba Network
 
 # Contributors
