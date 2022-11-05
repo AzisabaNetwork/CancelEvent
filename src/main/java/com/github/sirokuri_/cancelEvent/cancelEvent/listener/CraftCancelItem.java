@@ -42,7 +42,6 @@ public class CraftCancelItem implements Listener {
         ItemStack itemStack = event.getCurrentItem();
         Inventory inventory = event.getClickedInventory();
         if (inventory == null) return;
-        int slot = event.getSlot();
         if (itemStack == null) return;
         ItemMeta itemMeta = itemStack.getItemMeta();
         if (itemMeta == null) return;
@@ -50,10 +49,6 @@ public class CraftCancelItem implements Listener {
             if(itemMeta.getDisplayName().equals(ChatColor.RED + "クラフトはできません")){
                 event.setCancelled(true);
             }
-        }
-        if (inventory == player.getInventory()){
-            if (!(slot == 8)) return;
-            if (!(player.getGameMode() == GameMode.CREATIVE)) event.setCancelled(true);
         }
     }
 }
